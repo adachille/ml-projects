@@ -1,0 +1,35 @@
+[project]
+name = "chessmate"
+version = "0.1.0"
+description = "AlphaZero-lite: Train a neural network to play chess"
+requires-python = ">=3.10"
+dependencies = [
+    "python-chess",
+    "torch",
+    "numpy",
+    "matplotlib",
+    "tqdm",
+    "mlflow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+    "pre-commit",
+    "mypy",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
