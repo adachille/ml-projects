@@ -16,3 +16,5 @@ jobs:
         run: uvx ruff format --check chessmate
       - name: Check linting
         run: uvx ruff check chessmate
+      - name: Type check
+        run: uv run --project chessmate mypy chessmate/src
