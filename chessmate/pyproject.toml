@@ -16,6 +16,8 @@ dependencies = [
 dev = [
     "ruff",
     "pytest",
+    "pre-commit",
+    "mypy",
 ]
 
 [tool.ruff]
@@ -23,6 +25,11 @@ line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
